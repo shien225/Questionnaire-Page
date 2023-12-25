@@ -1,0 +1,14 @@
+p {
+    font-size: 30px;
+  }
+  
+  a {
+    align-items: center;
+    font-size: 40px;
+  }
+  
+  .container {
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+  }
