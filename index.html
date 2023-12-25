@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html　lang="ja">
+<meta charset="UTF8">
+<link rel="stylesheet" href="index.css">
+<head>
+  <title>エンタメ動画による学習意欲の調査</title>
+</head>
+
+<body>
+  <h1>はじめに</h1>
+  <p>今回の実験にご協力いただきありがとうございます。</p>
+  <p>今回の実験は日本大学文理学部大澤研究室の研究の一環で、エンタメ動画における学習意欲の調査です。</p>
+  <p>「実験開始」をクリックするとアンケートが開始されますので、アンケートの説明に従い進めてください。</p>
+  <div class=container>
+    <script>
+      var l=[];
+      l[0] = "<a href = 'https://docs.google.com/forms/d/1xILCw5W9CJUeFd4CsJJqW_hZ_4citiVdgPNYvHIyZdc/viewform?edit_requested=true'>実験開始</a>";
+      l[1] = "<a href = 'https://docs.google.com/forms/d/15NF7JPhDui3mCIhbmuLjumiQHjVC1hezJkVBTwGDOdI/viewform?edit_requested=true'>実験開始</a>";
+      var x;
+      x = Math.floor(Math.random()*2);
+      document.write(l[x]);
+
+      if (document.addEventListener) {
+        document.addEventListener("keydown", execF12Cancel);
+      } else if (document.attachEvent) {
+        document.attachEvent("onkeydown", execF12Cancel);
+      }
+
+      let contextmenu_function = () => {
+        event.preventDefault();
+      }
+
+      document.addEventListener('contextmenu', contextmenu_function);
+
+      function execF12Cancel(e){
+        var keycode;
+        var keyEvent;
+        if (document.all) {         // Internet Explorer
+            keycode = event.keyCode;
+            keyEvent = event;
+        } else {                    // Mozilla(Firefox, NN) and Opera
+            keycode = e.which;
+            keyEvent = e;
+        }
+        if (keycode == 123){
+          if (keyEvent.preventDefault) {
+            keyEvent.preventDefault();
+          } else {
+            keyEvent.keyCode = 0;
+          }
+          return false;
+        }
+      }
+    </script>
+  </div>
+</body>
+</html>
